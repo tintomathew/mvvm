@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="CategoryBindingTwo">
+        <variable
+                name="categoryModelTwo"
+                type="com.kotlin.learning.viewmodel.CategoryViewModel"/>
+    </data>
+
+<android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+    <ImageView android:layout_height="120dp"
+               android:layout_width="120dp"
+               android:layout_marginStart="20dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:layout_marginTop="20dp"
+               android:scaleType="fitCenter"
+               android:id="@+id/imageView"
+               android:src="@{categoryModelTwo.imageUrl}"
+               app:srcCompat="@mipmap/ic_launcher"/>
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="wrap_content"
+              android:layout_marginStart="10dp"
+              android:text="@{categoryModelTwo.title}"
+              app:layout_constraintTop_toTopOf="parent"
+              android:layout_marginTop="20dp"
+              android:id="@+id/textView"
+              app:layout_constraintHorizontal_bias="0.05"
+              app:layout_constraintStart_toEndOf="@+id/imageView"
+              android:layout_marginEnd="20dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:textColor="#000000"
+              android:gravity="center_vertical" />
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="10dp"
+              android:id="@+id/textView1"
+              android:text="@{categoryModelTwo.description}"
+              app:layout_constraintHorizontal_bias="0.05"
+              app:layout_constraintStart_toEndOf="@+id/imageView"
+              android:layout_marginEnd="20dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:textColor="#000000"
+              android:gravity="center_vertical"
+              app:layout_constraintTop_toBottomOf="@+id/textView"
+              android:textStyle="bold"/>
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="wrap_content"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="10dp"
+              android:id="@+id/textView2"
+              app:layout_constraintHorizontal_bias="0.05"
+              app:layout_constraintStart_toEndOf="@+id/imageView"
+              android:layout_marginEnd="20dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:textColor="#000000"
+              android:gravity="center_vertical"
+              android:text="Tinto Mathew"
+              app:layout_constraintTop_toBottomOf="@+id/textView1"
+              android:textStyle="italic"/>
+
+    <View android:layout_height="2dp"
+          android:layout_width="wrap_content"
+          android:layout_marginStart="10dp"
+          android:id="@+id/view"
+          android:background="@color/colorPrimary"
+          app:layout_constraintHorizontal_bias="0.05"
+          app:layout_constraintStart_toEndOf="@+id/imageView"
+          android:layout_marginEnd="20dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:gravity="center_vertical"
+          app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="0dp"
+              android:layout_marginTop="5dp"
+              android:id="@+id/view1"
+              android:background="@color/colorPrimary"
+              android:textColor="#FFFFFF"
+              android:gravity="center_vertical"
+              android:text="Test"
+              app:layout_constraintTop_toBottomOf="@id/imageView"
+              app:layout_constraintLeft_toLeftOf="@id/textView2"
+              app:layout_constraintRight_toLeftOf="@+id/view2"
+              app:layout_constraintHorizontal_weight="1"
+              android:maxLines="1"
+              android:ellipsize="end"/>
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="0dp"
+              android:layout_marginTop="5dp"
+              android:id="@+id/view2"
+              android:background="@color/colorAccent"
+              android:textColor="#FFFFFF"
+              android:gravity="center_vertical"
+              android:text="welcome"
+              app:layout_constraintTop_toBottomOf="@id/imageView"
+              app:layout_constraintRight_toLeftOf="@+id/view3"
+              app:layout_constraintHorizontal_weight="2"
+              android:maxLines="1"
+              android:ellipsize="end"
+              app:layout_constraintLeft_toRightOf="@+id/view1"/>
+
+    <TextView android:layout_height="30dp"
+              android:layout_width="0dp"
+              android:layout_marginTop="5dp"
+              android:id="@+id/view3"
+              android:background="@color/colorPrimary"
+              android:textColor="#FFFFFF"
+              android:gravity="center_vertical"
+              android:text="Job"
+              app:layout_constraintTop_toBottomOf="@id/imageView"
+              app:layout_constraintHorizontal_weight="3"
+              android:maxLines="1"
+              android:ellipsize="end"
+              android:layout_marginRight="5dp"
+              app:layout_constraintLeft_toRightOf="@+id/view2"
+              app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

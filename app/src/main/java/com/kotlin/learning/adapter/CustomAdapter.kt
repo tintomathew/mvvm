@@ -6,7 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.kotlin.learning.R
-import com.kotlin.learning.databinding.CategoryBinding
+import com.kotlin.learning.databinding.CategoryBindingTwo
+
 import com.kotlin.learning.viewmodel.CategoryViewModel
 
 class CustomAdapter(private val context: Context, private val arrayList: ArrayList<CategoryViewModel>):
@@ -14,7 +15,7 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CustomView {
         val layoutInflater = LayoutInflater.from(context)
 
-        val categoryBinding: CategoryBinding = DataBindingUtil.inflate(layoutInflater, R.layout.item, p0, false)
+        val categoryBinding: CategoryBindingTwo = DataBindingUtil.inflate(layoutInflater, R.layout.recycle_item, p0, false)
 
         return CustomView(categoryBinding)
     }
@@ -31,10 +32,10 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
         p0.bind(categoryViewModel)
     }
 
-    class CustomView(val categoryBinding: CategoryBinding): RecyclerView.ViewHolder(categoryBinding.root){
+    class CustomView(val categoryBinding: CategoryBindingTwo): RecyclerView.ViewHolder(categoryBinding.root){
     fun bind(categoryViewModel: CategoryViewModel) {
 
-        this.categoryBinding.categoryModel = categoryViewModel
+        this.categoryBinding.categoryModelTwo = categoryViewModel
         categoryBinding.executePendingBindings()
 
     }
